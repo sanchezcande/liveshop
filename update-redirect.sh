@@ -25,6 +25,6 @@ printf 'User-agent: *\nDisallow: /\n' > robots.txt
 git add index.html 404.html robots.txt update-redirect.sh
 if ! git diff --cached --quiet; then
   git commit -q -m "Point live shop link to $TARGET" -m "Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
-  git push -q origin main
 fi
+git push -q -u origin main
 echo "redirect -> $TARGET"
